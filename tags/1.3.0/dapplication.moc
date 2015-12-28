@@ -1,0 +1,109 @@
+/****************************************************************************
+** DApplication meta object code from reading C++ file 'dapplication.h'
+**
+** Created: Wed Jul 16 14:44:41 2008
+**      by: The Qt MOC ($Id: qt/src/moc/moc.y   2.3.8   edited 2004-08-05 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#define Q_MOC_OUTPUT_REVISION 9
+#elif Q_MOC_OUTPUT_REVISION != 9
+#error "Moc format conflict - please regenerate all moc files"
+#endif
+
+#include "dapplication.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+#ifdef QWS
+#include <qobjectdict.h>
+#endif
+
+
+
+const char *DApplication::className() const
+{
+    return "DApplication";
+}
+
+QMetaObject *DApplication::metaObj = 0;
+
+#ifdef QWS
+static class DApplication_metaObj_Unloader {
+public:
+    ~DApplication_metaObj_Unloader()
+    {
+         if ( objectDict )
+             objectDict->remove( "DApplication" );
+    }
+} DApplication_metaObj_unloader;
+#endif
+
+void DApplication::initMetaObject()
+{
+    if ( metaObj )
+	return;
+    if ( qstrcmp(ZApplication::className(), "ZApplication") != 0 )
+	badSuperclassWarning("DApplication","ZApplication");
+    (void) staticMetaObject();
+}
+
+#ifndef QT_NO_TRANSLATION
+
+QString DApplication::tr(const char* s)
+{
+    return qApp->translate( "DApplication", s, 0 );
+}
+
+QString DApplication::tr(const char* s, const char * c)
+{
+    return qApp->translate( "DApplication", s, c );
+}
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* DApplication::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    (void) ZApplication::staticMetaObject();
+#ifndef QT_NO_PROPERTIES
+#endif // QT_NO_PROPERTIES
+    typedef void (DApplication::*m1_t0)();
+    typedef void (QObject::*om1_t0)();
+    typedef void (DApplication::*m1_t1)(QListBoxItem*,const QPoint&);
+    typedef void (QObject::*om1_t1)(QListBoxItem*,const QPoint&);
+    typedef void (DApplication::*m1_t2)();
+    typedef void (QObject::*om1_t2)();
+    m1_t0 v1_0 = &DApplication::OpenDir;
+    om1_t0 ov1_0 = (om1_t0)v1_0;
+    m1_t1 v1_1 = &DApplication::OpenFile;
+    om1_t1 ov1_1 = (om1_t1)v1_1;
+    m1_t2 v1_2 = &DApplication::about;
+    om1_t2 ov1_2 = (om1_t2)v1_2;
+    QMetaData *slot_tbl = QMetaObject::new_metadata(3);
+    QMetaData::Access *slot_tbl_access = QMetaObject::new_metaaccess(3);
+    slot_tbl[0].name = "OpenDir()";
+    slot_tbl[0].ptr = (QMember)ov1_0;
+    slot_tbl_access[0] = QMetaData::Public;
+    slot_tbl[1].name = "OpenFile(QListBoxItem*,const QPoint&)";
+    slot_tbl[1].ptr = (QMember)ov1_1;
+    slot_tbl_access[1] = QMetaData::Public;
+    slot_tbl[2].name = "about()";
+    slot_tbl[2].ptr = (QMember)ov1_2;
+    slot_tbl_access[2] = QMetaData::Public;
+    metaObj = QMetaObject::new_metaobject(
+	"DApplication", "ZApplication",
+	slot_tbl, 3,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    metaObj->set_slot_access( slot_tbl_access );
+#ifndef QT_NO_PROPERTIES
+#endif // QT_NO_PROPERTIES
+    return metaObj;
+}

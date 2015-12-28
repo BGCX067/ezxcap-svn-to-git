@@ -1,0 +1,11 @@
+[Desktop Entry]
+BigIcon = iconB.png
+Comment = Written by dnxh
+Domain = T
+Exec = ecap_dnxh
+Icon = iconS.png
+Name = eCap
+Shared = 1
+Type = Application
+Vendor = www.dnxh.cn
+Version = Ver1.2
